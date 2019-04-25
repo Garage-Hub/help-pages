@@ -1,11 +1,17 @@
-from django.shortcuts import render
+from django.views.generic import TemplateView
 import os
 
-def single_page(request, category, slug):
 
-    print(category)
-    print(slug)
+class single_page(TemplateView):
+    template_name = 'single.html'
 
-    content = open(os.path.dirname(__file__) + '/../data/%s/%s.md' % (category, slug)).read()
+    def get_context_data(self, **kwargs):
+        category = kwargs.get('category')
+        slug = kwargs.get('slug')
 
-    return render(request, 'single.html', { 'content': content })
+        content = open(os.path.dirname(__file__) + '/../data/%s/%s.md' % (category, slug)).read()
+
+        ctx = super(single_page, self).get_context_data(**kwargs)
+        ctx['content'] = content
+
+        return ctx

@@ -19,5 +19,5 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('<str:category>/<slug:slug>', views.single_page, name='single')
+    path('<str:category>/<slug:slug>', views.single_page.as_view(), name='single')
 ]
