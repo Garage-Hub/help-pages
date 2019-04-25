@@ -1,6 +1,7 @@
-/* Thank to: https://github.com/mladenplavsic/bootstrap-navbar-sidebar  */
+/* Thanks to: https://github.com/mladenplavsic/bootstrap-navbar-sidebar  */
 body {
     padding-top: 90px;
+    color: #141823;
 }
 
 @media (min-width: 768px) {
@@ -61,4 +62,12 @@ body {
     .navbar.fixed-left .navbar-nav .nav-item .dropdown-menu {
         left: 100%;
     }
+}
+
+/**
+    Custom
+ */
+
+.navbar {
+    background: linear-gradient(to left top, rgb(40, 165, 245), rgb(30, 135, 240))
 }
