@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', TemplateView.as_view(template_name="home.html"), name='home'),
     path('<str:category>/<slug:slug>', views.single_page.as_view(), name='single')
 ]
