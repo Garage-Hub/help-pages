@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
 
+{% block content %}
+<div class="col-md-12">
   {% load markdownify %}
   {{ content|markdownify }}
-
-  {{'Some *test* [link](#)'|markdownify }}
-
-</body>
-</html>
+</div>
+{% endblock %}
