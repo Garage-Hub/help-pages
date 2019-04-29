@@ -69,5 +69,25 @@ body {
  */
 
 .navbar {
-    background: linear-gradient(to left top, rgb(40, 165, 245), rgb(30, 135, 240))
+    background: rgb(247, 248, 249);
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 50px 70px;
+    }
+
+    .navbar {
+        box-shadow: inset -10px 0 10px -10px rgba(0, 0, 0, .1);
+    }
+}
+
+.header-main {
+    justify-content: space-between;
+    background: linear-gradient(to left top, rgb(40, 165, 245), rgb(30, 135, 240));
+}
+
+.footer {
+    font-size: .785rem;
+    border-top: 1px solid #ddd;
 }
